@@ -1,0 +1,27 @@
+{
+  "name": "typescriptexpresssetup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "watch": "npx tsc -w",
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "dev": "npx concurrently --kill-others \"npm:watch\" \"npm:serve\"",
+    "serve": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "concurrently": "^9.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7"
+  }
+}
